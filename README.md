@@ -17,13 +17,13 @@ The database has already been designed for you. You should not change it.
 ![Schema Design](/images/schema.png)
 
 ### The Challenge
-You are creating two endpoints that will expose data about students and cohorts. 
+You are creating two endpoints that will expose data about students and cohorts. We recommend serializing your json data by hand (creating your own methods in the serializer to format your response), and then refactoring to use the [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer#installation) gem if you have more time. 
 <details>
   <summary><b>ENDPOINT 1</b></summary>
   
   **GET all students**
 
-  Your endpoint should follow this format: 
+  Your endpoint should follow this format: <br>
   `GET /api/v1/students`
 
   Your API will return: 
@@ -112,7 +112,7 @@ You are creating two endpoints that will expose data about students and cohorts.
   
   **GET one cohort**
   
-  Your endpoint should follow this format: 
+  Your endpoint should follow this format: <br>
   `GET /api/v1/cohorts/:id`
 
   Your API will return: 
