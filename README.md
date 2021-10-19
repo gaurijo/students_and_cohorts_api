@@ -14,7 +14,7 @@ When you run your test suite, you should have **12 passing tests**.
 ### Schema
 The database has already been designed for you. You should not change it. 
 
-![Schema Design](/images/schema_design.png)
+![Schema Design](/images/schema.png)
 
 ### The Challenge
 You are creating two endpoints that will expose data about students and cohorts. 
