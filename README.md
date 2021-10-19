@@ -113,7 +113,7 @@ You are creating two endpoints that will expose data about students and cohorts.
   **GET one cohort**
   
   Your endpoint should follow this format: 
-  `GET /api/v1/cohort/:id`
+  `GET /api/v1/cohorts/:id`
 
   Your API will return: 
   * name
