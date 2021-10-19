@@ -39,7 +39,6 @@ You are creating two endpoints that will expose data about students and cohorts.
   <details>
     <summary>GET /api/v1/students</summary>
 
-    ```
     {
         "data": [
             {
@@ -99,7 +98,6 @@ You are creating two endpoints that will expose data about students and cohorts.
             ...
         ]
       }
-    ```
 
   </details>
 
