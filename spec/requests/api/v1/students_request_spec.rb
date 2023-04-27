@@ -90,5 +90,20 @@ describe 'Students API' do
     get "/api/v1/students"
 
     expect(response).to be_successful 
+    expect(response.status).to eq(200)
+
+    students = JSON.parse(response.body, symbolize_names: true)
+
+    students.each do |student|
+      expect(student).to have_key(:id)
+      expect(student[:id]).to be_a(Integer)
+      expect(student).to have_key(:first_name)
+      expect(student).to have_key(:last_name)
+      expect(student).to have_key(:preferred_name)
+      expect(student).to have_key(:pronouns)
+      expect(student).to have_key(:email)
+      expect(student).to have_key(:github_username)
+      expect(student).to have_key(:slack_username)
+    end
   end
 end
