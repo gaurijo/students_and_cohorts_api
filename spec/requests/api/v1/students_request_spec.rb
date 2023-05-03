@@ -17,18 +17,18 @@ describe 'Students API' do
     expect(response).to be_successful 
     expect(response.status).to eq(200)
 
-    students = JSON.parse(response.body, symbolize_names: true)
+    students = JSON.parse(response.body, symbolize_names: true)[:data]
 
     students.each do |student|
-      expect(student).to have_key(:id)
-      expect(student[:id]).to be_a(Integer)
-      expect(student).to have_key(:first_name)
-      expect(student).to have_key(:last_name)
-      expect(student).to have_key(:preferred_name)
-      expect(student).to have_key(:pronouns)
-      expect(student).to have_key(:email)
-      expect(student).to have_key(:github_username)
-      expect(student).to have_key(:slack_username)
+      expect(student[:id]).to be_a(String)
+      expect(student).to have_key(:attributes)
+      expect(student[:attributes]).to have_key(:first_name)
+      expect(student[:attributes]).to have_key(:last_name)
+      expect(student[:attributes]).to have_key(:preferred_name)
+      expect(student[:attributes]).to have_key(:pronouns)
+      expect(student[:attributes]).to have_key(:email)
+      expect(student[:attributes]).to have_key(:github_username)
+      expect(student[:attributes]).to have_key(:slack_username)
     end
   end
 end
