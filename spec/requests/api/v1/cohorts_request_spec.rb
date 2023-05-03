@@ -33,6 +33,7 @@ describe 'Cohorts API' do
     get "/api/v1/cohorts/999999"
 
     response_body = JSON.parse(response.body)
+    expect(response.status).to eq(404)
     expect(response_body).to eq({"error"=>"Cohort not available"})
   end
 end
